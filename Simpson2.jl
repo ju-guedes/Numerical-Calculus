@@ -14,7 +14,7 @@ function integrateSimp1F(f, a, b, n = 1)
     sety = zeros(n + 1)
     for k in 1:n + 1
         if k > 1 && k < n + 1
-            sety[k] = k % 3 == 1: 2 * f(setx[k])? 3 * f(setx[k])
+            sety[k] = k % 3 == 1 ? 2 * f(setx[k]) : 3 * f(setx[k])
         else
             sety[k] = f(setx[k])
         end
@@ -27,7 +27,7 @@ function integrateSimp1Y(y, a, b, n = 1)
     setx = getsetx(a, b, n)
     for k in 1:n + 1
         if k > 1 && k < n + 1
-            y[k] = k % 3 == 1: 2 * y[k]? 3 * y[k]
+            y[k] = k % 3 == 1 ? 2 * y[k] : 3 * y[k]
         end
     end
     return (3 * abs(a - b)/(8 * n)) * sum(y)
