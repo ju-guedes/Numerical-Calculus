@@ -1,6 +1,6 @@
 #=
 Simpson2:
-- Julia version: 1
+- Julia version: 2
 - Author: Julia
 - Date: 2022-11-18
 =#
