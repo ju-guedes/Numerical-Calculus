@@ -23,3 +23,7 @@ function qGaussian(f, a, b, n)
     end
     return sum([coef[n][2][k] * f(coef[n][1][k]) for k in 1:n])
 end
+
+function errorT(fd, n)
+    return ((2^(2*n + 1) * (factorial(n))^4)/((2*n + 1) * (factorial(2*n))^3)) * fd
+end
