@@ -35,6 +35,6 @@ end
 # Error function
 function errorT(df4, a, b, n)
     yd = [abs(df4(a)), abs(df4(b))]
-    return -(abs(b - a)^5)/(180 * n^4) * max(yd...)
+    return abs((abs(b - a)^5)/(180 * n^4) * max(yd...))
 end
 
